@@ -1,60 +1,235 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<html>
+<head><title> GPA calculator </title></head>
+<body bgcolor="pink">
+<h1><center> NEB GRADE 12 SCIENCE GPA CALCULATOR </center></h1>
+<form>
+    
+<text align="left"><h2>Enter grade in number (Eg 3.6,4,3.2)</h2><br> <h3>Note:<br>Eg. For A+(4) in theory 90% of 75 = 67.5 is required <br> For A+(4) in practical 90% of 25 = 22.5 is required <br> For A 80% is required <br> For B+ 70% is required  <h3> </text> <br><br>
+<h4>Nepali(Th) in Grade : <input type="text" id="nepali" value="0"></input><br><br>
+English(Th) in Grade: <input type="text" id="english" value="0"></input><br><br>
+Maths(Th) in Grade: <input type="text" id="maths" value="0"></input><br><br>
+Physics(Th) in Grade: <input type="text" id="physics" value="0"></input><br><br>
+Chemistry(Th) in Grade: <input type="text" id="chemistry" value="0"></input><br><br>
+Computer(Th) in Grade : <input type="text" id="comp" value="0"></input><br><br>
+OR<br>
+Bio(Th) in Grade : <input type="text" id="bio" value="0"></input><br><br>
+<h4>Nepali(pr) in Grade: <input type="text" id="nepalip" value="0"></input><br><br>
+    English(pr) in Grade: <input type="text" id="englishp" value="0"></input><br><br>
+    Maths(pr) in Grade: <input type="text" id="mathsp" value="0"></input><br><br>
+    Physics(pr) in Grade : <input type="text" id="physicsp" value="0"></input><br><br>
+    Chemistry(pr) in Grade : <input type="text" id="chemistryp" value="0"></input><br><br>
+    Computer(pr) in Grade : <input type="text" id="compp" value="0"></input><br><br>
+    OR <br>
+    Bio(pr) in Grade : <input type="text" id="biop" value="0"></input><br><br>
+<input type="Submit" onclick="main()"></input>
+</form></h4>
+<table class="customTable">
+    <tbody><tr>
 
-  <title>Exam is such a headache</title>
- 
-  <script type="text/javascript">
-  function warn()
-  {
-    var a,b,sum;
-   a = Number(document.getElementById('first').value);
-   b = Number(document.getElementById('second').value);
-   sum=a+b;
-   document.getElementById('answer').value=sum;
-  }
-  function warn2()
-  {
-    var a, b, sum;
-    a = Number(document.getElementById('first').value);
-    b = Number(document.getElementById('second').value);
-    sum = a * b;
-    document.getElementById('answer').value = sum;
-  }
-  function warn3()
-  {
-    var a, b, sum;
-    a = Number(document.getElementById('first').value);
-    b = Number(document.getElementById('second').value);
-    sum = a / b;
-    document.getElementById('answer').value = sum;
-  }
-  function warn4()
-  {
-    var a, b, sum;
-    a = Number(document.getElementById('first').value);
-    b = Number(document.getElementById('second').value);
-    sum = a - b;
-    document.getElementById('answer').value = sum;
-  }
- 
+        
+            <th>
+                Grade
+            </th>
+        
+            <th>
+                Scale
+            </th>
+        
+            <th>
+                Scale 2
+            </th>
+        
+            <th>
+                Grade Description
+            </th>
+        
+        
+            <th>
+                 Grade
+            </th>
+        
+        
+    </tr>
+        <tr>
+                            <td align="center">
+                    A+  
+                </td>
+                            <td style="white-space:nowrap;">
+                    90.00 - 100.00
+                </td>
+                            <td style="white-space:nowrap;">
+                    4.00
+                </td>
+                            <td>
+                    Outstanding
+                </td>
+                                        <td align="center">
+                    A+  
+                </td>
+                                </tr>
+        <tr>
+                            <td align="center">
+                    A   
+                </td>
+                            <td style="white-space:nowrap;">
+                    80.00 - 89.00
+                </td>
+                            <td style="white-space:nowrap;">
+                    3.60
+                </td>
+                            <td>
+                    Excellent
+                </td>
+                                        <td align="center">
+                    A   
+                </td>
+                                </tr>
+        <tr>
+                            <td align="center">
+                    B+  
+                </td>
+                            <td style="white-space:nowrap;">
+                    70.00 - 79.00
+                </td>
+                            <td style="white-space:nowrap;">
+                    3.20
+                </td>
+                            <td>
+                    Very Good
+                </td>
+                                        <td align="center">
+                    B   
+                </td>
+                                </tr>
+        <tr>
+                            <td align="center">
+                    B   
+                </td>
+                            <td style="white-space:nowrap;">
+                    60.00 - 69.00
+                </td>
+                            <td style="white-space:nowrap;">
+                    2.80
+                </td>
+                            <td>
+                    Good
+                </td>
+                                        <td align="center">
+                    B   
+                </td>
+                                </tr>
+        <tr>
+                            <td align="center">
+                    C+  
+                </td>
+                            <td style="white-space:nowrap;">
+                    50.00 - 59.00
+                </td>
+                            <td style="white-space:nowrap;">
+                    2.40
+                </td>
+                            <td>
+                    Above Average
+                </td>
+                                        <td align="center">
+                    C   
+                </td>
+                                </tr>
+        <tr>
+                            <td align="center">
+                    C   
+                </td>
+                            <td style="white-space:nowrap;">
+                    40.00 - 49.00
+                </td>
+                            <td style="white-space:nowrap;">
+                    2.00
+                </td>
+                            <td>
+                    Average
+                </td>
+                                        <td align="center">
+                    C   
+                </td>
+                                </tr>
+        <tr>
+                            <td align="center">
+                    D+  
+                </td>
+                            <td style="white-space:nowrap;">
+                    30.00 - 39.00
+                </td>
+                            <td style="white-space:nowrap;">
+                    1.80
+                </td>
+                            <td>
+                    Below Average
+                </td>
+                                        <td align="center">
+                    D   
+                </td>
+                                </tr>
+        <tr>
+                            <td align="center">
+                    D   
+                </td>
+                            <td style="white-space:nowrap;">
+                    20.00 - 29.00
+                </td>
+                            <td style="white-space:nowrap;">
+                    1.60
+                </td>
+                            <td>
+                    Above Insufficient
+                </td>
+                                        <td align="center">
+                    D   
+                </td>
+                                </tr>
+        <tr>
+                            <td align="center">
+                    E   
+                </td>
+                            <td style="white-space:nowrap;">
+                    0.00 - 19.00
+                </td>
+                            <td style="white-space:nowrap;">
+                    0.80
+                </td>
+                            <td>
+                    Insufficient
+                </td>
+                                        <td align="center">
+                    F   
+                </td>
+                                </tr>
+</tbody></table>
+<script>
+    
+    function main()
+    {
+        var computp=0,comput=0,bio=0,biop=0,gpa;
+    var nepali=parseFloat(document.getElementById("nepali").value);
+    var englis=parseFloat(document.getElementById("english").value);
+    var mathem=parseFloat(document.getElementById("maths").value);
+    var physics=parseFloat(document.getElementById("physics").value);
+    var chemist=parseFloat(document.getElementById("chemistry").value);
+    comput=parseFloat(document.getElementById("comp").value);
+    var nepalip=parseFloat(document.getElementById("nepalip").value);
+    var englisp=parseFloat(document.getElementById("englishp").value);
+    var mathemp=parseFloat(document.getElementById("mathsp").value);
+    var physicsp=parseFloat(document.getElementById("physicsp").value);
+    var chemistp=parseFloat(document.getElementById("chemistryp").value);
+    computp=parseFloat(document.getElementById("compp").value);
+    bio=parseFloat(document.getElementById("bio").value);
+    biop=parseFloat(document.getElementById("biop").value);
+    
+    gpa=(nepali*2.25+englis*3+mathem*3.75+physics*3.75+chemist*3.75+comput*2.5+nepalip*0.75+englisp*1+mathemp*1.25+physicsp*1.25+chemistp*1.25+computp*2.5+bio*3.75+biop*1.25)/27;
+    alert("Your GPA is "+gpa); 
+    }
+
+</script>
 </script>
 
-</head>
-
-<body bgcolor="sky blue">
-  
-    First Number: <input id="first"><br>
-    Second Number: <input id="second"><br>
-    <button onclick="warn();">add</button>
-    <button onclick="warn4();">subtract</button>
-    <button onclick="warn2();">multiply</button>
-    <button onclick="warn3();">divide</button>
-    
-    <input id="answer">
-  
 </body>
 </html>
